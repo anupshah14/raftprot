@@ -1,0 +1,87 @@
+<html>
+  <head>
+    <!--Load the AJAX API-->
+    <link rel="stylesheet" type="text/css" href="../homepage/css/search.css" />
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script type="text/javascript">
+    
+    // Load the Visualization API and the piechart package.
+    google.load('visualization', '1', {'packages':['corechart']});
+      
+    // Set a callback to run when the Google Visualization API is loaded.
+    google.setOnLoadCallback(drawChart);
+      
+    function drawChart() {
+      var jsonData1 = $.ajax({
+          url: "getData.php",
+          dataType:"json",
+          async: false
+          }).responseText;
+      var jsonData2 = $.ajax({
+          url: "getSpecies.php",
+          dataType:"json",
+          async: false
+          }).responseText;
+      var jsonData3 = $.ajax({
+          url: "getProteins.php",
+          dataType:"json",
+          async: false
+          }).responseText;
+        var data1 = new google.visualization.DataTable(jsonData1);
+		var option1 = {
+			title: 'Number of Publications',
+			hAxis: {title: 'Year', textStyle: {fontSize: '12'},titleTextStyle: {color: 'black'}},
+			legend : 'none',          
+			};
+        var data2= new google.visualization.DataTable(jsonData2);
+		var option2= {
+			title:'Experiment distribution among organisms',
+//			pieSliceText: 'label', // gives rowname to each pie slice
+			pieSliceText: 'none',
+			legend: {position:'bottom'},
+			//is3D: true, //for 3D pie chart
+			pieHole: 0.4,
+			};
+		var data3= new google.visualization.DataTable(jsonData3);
+		var option3 = {
+			title: 'Number of proteins per experiments',
+			hAxis: {title: 'Experiment', textStyle: {fontSize: '10'}, titleTextStyle: {color: 'black'}},
+			legend : 'none',
+			};
+			
+      // Instantiate and draw our chart, passing in some options.
+var chart1= new google.visualization.ColumnChart(document.getElementById('chart_div1'));
+      chart1.draw(data1, option1);
+var chart2= new google.visualization.PieChart(document.getElementById('chart_div2'));
+      chart2.draw(data2, option2);   
+var chart3 = new google.visualization.ColumnChart(document.getElementById('chart_div3'));
+      chart3.draw(data3, option3);
+    }
+    
+
+    </script>
+  </head>
+
+  <body>
+	  <div class="container demo-3">
+				<header>
+				<h1>Database Statistics</h1>	
+				</header>
+	  <table align="center">
+      <tr valign="top">
+        <td style="width: 50%;">
+          <div id="chart_div1" style ="width: 800; height: 400;"></div>
+        </td>
+        <td style="width: 50%;">
+          <div id="chart_div2" style ="align: right; width: 800; height: 400;"></div>
+        </td>
+		</tr>
+      <tr>
+        <td colSpan=2>
+          <div id="chart_div3" style="align:left; width: 1600px; height: 400px;"></div>
+        </td>
+      </table>
+   </div>
+  </body>
+</html>

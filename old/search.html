@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<title>Search</title>
+		<!--link rel="stylesheet" type="text/css" href="css/search.css" /-->
+		<script src="js/modernizr.custom.js"></script>
+		
+		
+		<link rel="stylesheet" href="css/jquery-ui-1.10.4.custom.css">
+		<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+		<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+
+	<script src="./js/jquery.dataTables.js" type="text/javascript"></script>
+	<link href="./css/demo_table_jui.css" type="text/css" rel="stylesheet"></link>
+	<link href="./css/demo_page.css" type="text/css" rel="stylesheet"></link>
+	<link href="./css/TableTools.css" type="text/css" rel="stylesheet"></link>
+	<script type="text/javascript" charset="utf-8" src="./js/ZeroClipboard.js"></script>
+	<script type="text/javascript" charset="utf-8" src="./js/TableTools.js"></script>
+	<script type="text/javascript" charset="utf-8" src="./js/protein_search.js"></script>
+	<script type="text/javascript" charset="utf-8" src="./js/organism_search.js"></script>
+	<script type="text/javascript" charset="utf-8" src="./js/year_search.js"></script>
+	<script type="text/javascript" charset="utf-8" src="./js/biochemMethods.js"></script>
+	<script type="text/javascript" charset="utf-8" src="./js/cell_type_search.js"></script>
+	<script type="text/javascript" charset="utf-8" src="./js/experimental_details.js"></script>
+	<script type="text/javascript" charset="utf-8" src="./js/experiment_condition.js"></script>
+	<link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="./css/query-builder.min.css">
+        <script src="./js/query-builder.js"></script>
+	<script type="text/javascript" charset="utf-8" src="./js/advanced_bootstrap.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/search.css"/>
+		<style>
+			.ui-dialog { font-size: 75%; }
+			/*label, input { display:block; }*/
+			input.text { margin-bottom:12px; width:95%; padding: .4em; }
+			fieldset { padding:0; border:0; margin-top:25px; }
+			h1 { font-size: 1.2em; margin: .6em 0; }
+			div#users-contain { width: 350px; margin: 20px 0; }
+			div#users-contain table { margin: 1em 0; border-collapse: collapse; width: 100%;}
+			div#users-contain table td, div#users-contain table th { border: 1px solid #eee; padding: .6em 10px; text-align: left; }
+			.ui-dialog .ui-state-error { padding: .3em; }
+			.validateTips { border: 1px solid transparent; padding: 0.3em; } 
+			
+		 </style>
+
+	</head>
+	<body>
+		<div class="container demo-3">
+			
+		
+			<header>
+				<h1>Search Database</h1>	
+			
+			</header>
+			<ul class="grid cs-style-3">
+				<li>
+					<figure>
+						<img src="images/red/protein1.png" alt="img04">
+						<figcaption>
+							<h3>Protein</h3>
+							
+							<button id="create-user">Search</button>
+						</figcaption>
+					</figure>
+				</li>
+				<li>
+					<figure>
+						<img src="images/red/Cell_new.png" alt="img01">
+						<figcaption>
+							<h3>Cell type</h3>
+							<button id="search-cell">Search</button>
+							</figcaption>
+					</figure>
+				</li>
+				<li>
+					<figure>
+						<img src="images/red/Organism.png" alt="img02">
+						<figcaption>
+							<h3>Organism</h3>
+							<button id="search-organism">Search</button>
+						</figcaption>
+					</figure>
+				</li>
+				<li>
+					<figure>
+						<img src="images/red/Treatment.png" alt="img05">
+						<figcaption>
+							<h3>Method</h3>
+							<button id="method-search">Search</button>
+							
+						</figcaption>
+					</figure>
+				</li>
+				<li>
+					<figure>
+						<!--img src="images/red/Year_new.png" alt="img03"-->
+						<img src="images/red/Condition.png" alt="img06">
+						<figcaption>
+							<h3>Condition</h3>
+							<button id="condition-search">Search</button>
+							</figcaption>
+					</figure>
+				</li>
+				<li>
+					<figure>
+						<img src="images/red/Advanced_search.png" alt="img06">
+						<figcaption>
+							<h3>Advanced</h3>
+							<span></span>
+							<button id="advance-search">Search</a>
+						</figcaption>
+					</figure>
+				</li>
+			</ul>
+		</div>
+<div id="back_search">
+	<a href="search.html"><img src="images/red/Go_back.png"></a><span></span><p>Click to go back to search page</p>	
+</div>
+  <div id="dialog-form" title="Search for Protein">
+  <p class="validateTips">Choose any one field from following</p>
+  <form id="form" method="GET">
+  <fieldset>
+    <label for="gene_name">Gene Name</label>
+    <input type="text" name="gene_name" id="gene_name" value="" class="text ui-widget-content ui-corner-all">	
+    <label for="name">Protein Name</label>
+    <input type="text" name="name" id="name" class="text ui-widget-content ui-corner-all">
+    <label for="uniprot">Uniprot ID</label>
+    <input type="text" name="uniprot" id="uniprot" value="" class="text ui-widget-content ui-corner-all">
+  </fieldset>
+  </form>
+</div>
+ <div id="organism" title="Search for Organism">
+  <p class="validateTips">Choose any one orgamism</p>
+  <form id="form-1">
+  <fieldset>
+	<input type="radio" id="human" name="radio" value="Human" checked /><label for="human">Human</label><br></br>
+    <input type="radio" id="rat" name="radio" value="Rat" /><label for="rat">Rat</label><br></br>
+    <input type="radio" id="mouse" name="radio" value="Mouse" /><label for="mouse">Mouse</label><br></br>
+    <input type="radio" id="bovine" name="radio" value="Bovine" /><label for="bovine">Bovine</label><br></br>
+    <input type="radio" id="monkey" name="radio" value="Monkey" /><label for="money">African Green Monkey</label><br></br>
+    <input type="radio" id="hamster" name="radio" value="Hamster" /><label for="hamster">Hamster</label><br></br>
+    <input type="radio" id="primate" name="radio" value="Primate" /><label for="primate">Primate</label><br></br>
+    <input type="radio" id="rodent" name="radio" value="Rodent" /><label for="rodent">Rodent</label>
+	</fieldset>
+  </form>
+</div>
+ <div id="year" title="Search study by year">
+  <p class="validateTips">Choose year of the study</p>
+  <form id="form-2">
+  <fieldset>
+  Select Year:<select id="selection_year">	
+  </select>
+  </fieldset>
+  </form>
+</div>
+</div>
+<div id="query_builder" title="Advanced Search">
+  <div class="col-xs-12">
+    <div id="adv_search"></div>
+</div>
+</div>
+<div id="method" title="Search study by biochemical method of extraction">
+  <p class="validateTips">Choose biochemical method of extraction</p>
+  <form id="form-3">
+  <fieldset>
+  Select Method:<select id="selection_method">	
+  </select><br></br>
+  <div id="detergent">
+	Select Detergent: <select id="selection_detergent">
+  </select>
+  </div>		
+  </fieldset>
+  </form>
+</div>
+<div id="cell" title="Search by cell type or tissue">
+  <p class="validateTips">Choose cell or tissue type</p>
+  
+  <fieldset>
+	<input id="cellName" type="text" name="input"></input>
+	<input id="selectCellName" type="submit" value= "Select"/>
+	<input id="resetID" type="reset" value="Reset" />
+	<div id="output"></div>
+  </fieldset>  
+</div>
+<div id="condition" title="Search study by conditoin">
+  <p class="validateTips">Choose experiment condition</p>
+  <form id="form-4">
+  <fieldset>	
+   
+  <div id ='treatment_options'> 
+  Select Modulating Agent:  <select id="selection_treatment">
+  </select>
+  </div>	
+  </fieldset>
+  </form>
+</div>
+<!--div class="demo-ui"-->
+<div id="all_proteins_list">
+	<img src="images/red/Year_new.png"></a><span></span><p>Protein List... click here</p>	
+</div>		
+	<table id="table_protein" cellpadding="0" cellspacing="0" border="0" class="display">
+	<thead>
+	<th>Gene Name</th>
+	<th>Uniprot</th>
+	<th>Protein Name</th>
+	<th>Organism</th>
+	<th>Number of Experiments</th>
+	<th>Details</th>
+	</thead>
+	<tbody>
+	</tbody>
+	</table>
+	<table id="table_gene_name" cellpadding="0" cellspacing="0" border="0" class="display">
+	<thead>
+	<th>Gene Name</th>
+	<th>Uniprot</th>	
+	<th>Protein Name</th>
+	<th>Organism</th>
+	<th>Number of Experiments</th>
+	<th>Details</th>
+	</thead>
+	<tbody>
+	</tbody>
+	</table>
+	<table id="table_uniprot" cellpadding="0" cellspacing="0" border="0" class="display">
+	<thead>
+	<th></th>
+	<th>Author</th>
+	<th>Title</th>
+	<th>Year</th>
+	</thead>
+	<tbody>
+	</tbody>
+	</table>
+	<table id="table_cell" cellpadding="0" cellspacing="0" border="0" class="display">
+	<thead>
+	<th></th>
+	<th>Author</th>
+	<th>Title</th>
+	<th>Year</th>
+	</thead>
+	<tbody>
+	</tbody>
+	</table>
+	<table id="table_organism" cellpadding="0" cellspacing="0" border="0" class="display">
+	<thead>
+	<th></th>
+	<th>Author</th>
+	<th>Title</th>
+	<th>Year</th>
+	</thead>
+	<tbody>
+	</tbody>
+	</table>
+	<table id="table_year" cellpadding="0" cellspacing="0" border="0" class="display">
+	<thead>
+	<th></th>
+	<th>Author</th>
+	<th>Title</th>
+	<th>Year</th>
+	</thead>
+	<tbody>
+	</tbody>
+	</table>
+	<table id="table_method" cellpadding="0" cellspacing="0" border="0" class="display">
+	<thead>
+	<th></th>
+	<th>Author</th>
+	<th>Title</th>
+	<th>Year</th>
+	</thead>
+	<tbody>
+	</tbody>
+	</table>
+	<table id="table_condition" cellpadding="0" cellspacing="0" border="0" class="display">
+	<thead>
+	<th></th>
+	<th>Author</th>
+	<th>Title</th>
+	<th>Year</th>
+	</thead>
+	<tbody>
+	</tbody>
+	</table>
+	<table id="table_experiment" cellpadding="0" cellspacing="0" border="0" class="display">
+	<thead>
+	<th>Experiment ID</th>
+	<th>Uniprot Accession</th>
+	<th>Original ID</th>
+	<th>Protein Name</th>
+	<th>Ratio</th>
+	<th>Change</th>
+	</thead>
+	<tbody>
+	</tbody>
+	</table>
+	<div id="overlay">
+<img src="images/red/processing.gif">Loading.....
+</div>
+<!--/div-->
+	</body>
+</html>
+	

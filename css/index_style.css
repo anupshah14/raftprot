@@ -1,0 +1,183 @@
+ *{
+    margin:0;
+    padding:0;
+            }
+body{
+	font-family:Arial;
+	background:#fff url(images/background.png) no-repeat top left;
+	!background:#d3d2d2;
+	!background: #575555;
+	!background: #666464;
+    }
+
+.raftimage{
+	 width:450px;
+         height:250px;
+         position:absolute;
+         top:520px;
+         left:150px;
+         background:transparent url(images/Lipid_raft.png) no-repeat top left;
+         }
+#content{
+	margin:0 auto;
+	 }
+.title{
+    width:600px;
+    height:119px;
+    position:absolute;
+    top:320px;
+    left:135px;
+    font-size: 24px;
+    font-family: "Trebuchet MS", sans-serif;
+    color: #f03c3c;
+    font-weight: bold;
+    text-align:center;
+    text-shadow:1px 1px 1px #fff;            
+    }
+
+.navigation{
+    margin: 0px auto;
+    font-family: "Trebuchet MS", sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: bold;
+    letter-spacing: 1.4px;
+}
+.navigation .item{
+    position:absolute;
+}
+.home{
+    top:125px;
+    left:110px;
+	}
+.search{
+   top:50px;
+   left:340px;
+	}
+.browse{
+   top:90px;
+   left:625px;
+}
+.stats{
+   top:230px;
+   left:835px;
+	}
+.update{
+	top:420px;
+	left:950px;
+	}
+.help{
+   top:125px;
+   left:95px;
+	}
+.contact{
+   top:630px;
+   left:980px;
+	}
+
+a.icon{
+    width:52px;
+    height:52px;
+    position:absolute;
+    top:0px;
+    left:0px;
+    cursor:pointer;
+}
+.home a.icon{
+    background:transparent url(../images/red/home_red.png) no-repeat 0px 0px;
+}
+.search a.icon{
+    background:transparent url(../images/red/search_red.png) no-repeat 0px 0px;
+}
+.stats a.icon{
+    background:transparent url(../images/red/stat_red.png) no-repeat 0px 0px;
+}
+.update a.icon{
+	background:transparent url(../images/red/help_red.png) no-repeat 0px 0px;
+}
+.help a.icon{
+    background:transparent url(../images/red/about_red.png) no-repeat 0px 0px;
+}
+.contact a.icon{
+    background:transparent url(../images/red/contact_red.png) no-repeat 0px 0px;
+}
+.browse a.icon{
+    background:transparent url(../images/red/browse_icon.png) no-repeat 0px 0px;
+}
+
+
+.navigation .item a.active{
+    background-position:0px -52px;
+}
+.item img.circle{
+    position:absolute;
+    top:0px;
+    left:0px;
+    width:52px;
+    height:52px;
+    opacity:0.1;
+}
+.item h2{
+    position:absolute;
+    width:200px;
+    height:100px;
+    color:#222;
+	!color:#fff;
+    font-size:14px;
+    top:10px;
+    left:60px;
+    !text-indent:10px;
+    !line-height:52px;
+    text-shadow:1px 1px 1px #fff;
+    !text-transform:uppercase;
+}
+.info{
+    width:900px;
+    height:119px;
+    position:absolute;
+    top:800px;
+    left:20px;
+    font-size: 90%;
+    text-align:justify;
+    font-family: "Trebuchet MS", sans-serif;
+    }
+
+/*.item h2.active{
+    color:#fff;
+    text-shadow:1px 0px 1px #555;
+}
+.item ul{
+    list-style:none;
+    position:absolute;
+    top:60px;
+    left:25px;
+    display:none;
+}
+.item ul li a{
+    font-size:15px;
+    text-decoration:none;
+    letter-spacing:1.5px;
+    text-transform:uppercase;
+    !color:#222;
+	color:#3a3939;
+    padding:3px;
+    float:left;
+    clear:both;
+    width:100px;
+    !text-shadow:1px 1px 1px #fff;
+}
+.item ul li a:hover{
+    background-color:#fff;
+    color:#444;
+    -moz-border-radius:5px;
+    -webkit-border-radius:5px;
+    border-radius:5px;
+    -moz-box-shadow:1px 1px 4px #666;
+    -webkit-box-shadow:1px 1px 4px #666;
+    box-shadow:1px 1px 4px #666;
+}*/
+.disclaimer{
+
+font-size: 60%;
+
+}

@@ -1,0 +1,86 @@
+<html>
+  <head>
+    
+		<link rel="stylesheet" type="text/css" href="css/search.css" />
+		<link rel="stylesheet" type="text/css" href="css/about.css" />			
+		<link rel="stylesheet" href="./css/jquery-ui-1.10.3.custom.css">
+		<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+		<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+					
+  </head>
+  <body>
+	  <div class="container demo-3">
+				<header>
+				<span class="item home">
+                                        <a href="index.html">
+                    <img src="images/red/home_page.png" alt="" width="52" height="52" float="left" class="circle"/>
+                    </a>
+                                </span>
+
+				<h1>User Instructions</h1>	
+				</header>
+<!--- Main content ---> 
+<div class="grid">
+<div id="mainbody">
+<h3>Mammalian Lipid Raft Proteome Database:</h3> <br>
+Cholesterol-rich membrane microdomains, also known as lipid rafts, are specialized assemblies of membrane lipids and proteins that regulate diverse cellular processes. 
+In an attempt to clarify the protein composition of these microdomains we have developed a user-friendly database which serves as a key resource for membrane raft associated proteins. 
+The database captures proteome level information of lipid raft fractions extracted from various mammalian cells/tissues/organs. The user can search the database using "Search proteins and Experiments" tab.
+<div class="search_tab"></div>
+<br>
+<b>Search for Proteins or Experiments:</b> <br>
+The search page offers variety of options to search individual proteins, list of proteins, only high confidence proteins and experiments.
+<br><br>
+<div class="search_page"></div>
+<b><h3>Search Input Options:</h3></b> <br>
+<b>Protein search:</b> <br>
+The proteins can be searched based on gene name, protein name or using UniProt Ids. 
+The output offers detailed information about the protein along with experimental details in which protein was found. See search output section for output details.
+<br><br>
+<div class="protein_search"></div>
+<br>
+<b>Cell/Tissue/Organ search:</b> <br>
+Integration of the database with placental mammalian cell ontology (PMCLO) offers a unique search feature. 
+You can search for all proteins, a subset of high confidence protein or experiments in all the associated cell lines which are derived from a particular organ/tissue (ex. search by prostate). 
+Not only that membrane raft proteome from cancer derived cell lines, primary cells and perpetual cell lines can also be searched.
+<br><br>
+<div class="cell_type_search"></div>
+<br>
+<b>Organism search:</b> <br>
+You can search the proteins and experiments by organism. <br>
+<div class="organism_type_search"></div>
+<br>
+<b>Method search:</b> <br>
+Researchers have used various biochemical methods to extract lipid raft fractions from the cells. 
+The method of extraction might influence the raft proteome from the cells. You can search for the proteins and experiments based on extraction method as well as detergent (if used). 
+<br>
+<div class="method_type_search"></div>
+<b>Condition search:</b> <br>
+Various quantitative proteomic studies allow us to understand the dynamic aspects of lipid raft proteome. 
+Experiments focused on exploring spatial or temporal dynamic expression of raft associated proteins along with both altered and unaltetred proteins can be searched using this feature.<br> 
+<b>Note</b>: Protein search output will only provide qualitative information about the search parameter (i.e. list of all proteins irrespective of their directionality).
+More information about the quantitative changes in individual proteins could be obtained from protein lists of individual experiment. 
+<div class="condition_type_search"></div>
+<br>
+<b>Advanced Search:</b> <br>
+A advanced search feature offers costumized search option based on multiple criteria.<br></br>
+<div class="year_type_search"></div>
+<br><br>
+<b><h3>Search Outputs:</h3></b> <br>
+<b>Protein search output:</b> <br>
+<br>
+<div class="protein_exp_output"></div><br>
+<b>Proteins and high confidence proteins table:</b>
+<br><br>
+<div class="protein_table"></div><br>
+<b>Experiment search output:</b> 
+<br><br>
+<div class="experiment_table"></div><br>
+<b>Individual experiment details:</b>
+<br><br> 
+<div class="experiment_details"></div>
+</div>
+	</div>
+    </div>
+  </body>
+</html>

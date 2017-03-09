@@ -1,0 +1,138 @@
+.title{
+    width:548px;
+    height:119px;
+    position:absolute;
+    top:270px;
+    left:150px;
+	font-size: 25px;
+    font-family: "Trebuchet MS", sans-serif;
+	color: #f03c3c;
+	font-weight: bold;
+	text-transform:uppercase;
+	text-shadow:1px 1px 1px #fff;            
+    }
+
+.navigation{
+    margin: 0px auto;
+    font-family: "Trebuchet MS", sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: bold;
+    letter-spacing: 1.4px;
+}
+.navigation .item{
+    position:absolute;
+}
+.home{
+    top:125px;
+    left:110px;
+	}
+.search{
+   top:50px;
+   left:360px;
+	}
+.stats{
+   top:90px;
+   left:625px;
+	}
+.update{
+	top:230px;
+	left:835px;
+	}
+.help{
+   top:420px;
+   left:950px;
+	}
+.contact{
+   top:620px;
+   left:980px;
+	}
+
+a.icon{
+    width:52px;
+    height:52px;
+    position:absolute;
+    top:0px;
+    left:0px;
+    cursor:pointer;
+}
+.home a.icon{
+    background:transparent url(../images/red/home_red.png) no-repeat 0px 0px;
+}
+.search a.icon{
+    background:transparent url(../images/red/search_red.png) no-repeat 0px 0px;
+}
+.stats a.icon{
+    background:transparent url(../images/red/stat_red.png) no-repeat 0px 0px;
+}
+.update a.icon{
+	background:transparent url(../images/red/about_red.png) no-repeat 0px 0px;
+}
+.help a.icon{
+    background:transparent url(../images/red/help_red.png) no-repeat 0px 0px;
+}
+.contact a.icon{
+    background:transparent url(../images/red/contact_red.png) no-repeat 0px 0px;
+}
+
+
+.navigation .item a.active{
+    background-position:0px -52px;
+}
+.item img.circle{
+    position:absolute;
+    top:0px;
+    left:0px;
+    width:52px;
+    height:52px;
+    opacity:0.1;
+}
+.item h2{
+    position:absolute;
+    width:147px;
+    height:52px;
+    color:#222;
+	!color:#fff;
+    font-size:18px;
+    top:0px;
+    left:52px;
+    text-indent:10px;
+    line-height:52px;
+    text-shadow:1px 1px 1px #fff;
+    text-transform:uppercase;
+}
+/*.item h2.active{
+    color:#fff;
+    text-shadow:1px 0px 1px #555;
+}
+.item ul{
+    list-style:none;
+    position:absolute;
+    top:60px;
+    left:25px;
+    display:none;
+}
+.item ul li a{
+    font-size:15px;
+    text-decoration:none;
+    letter-spacing:1.5px;
+    text-transform:uppercase;
+    !color:#222;
+	color:#3a3939;
+    padding:3px;
+    float:left;
+    clear:both;
+    width:100px;
+    !text-shadow:1px 1px 1px #fff;
+}
+.item ul li a:hover{
+    background-color:#fff;
+    color:#444;
+    -moz-border-radius:5px;
+    -webkit-border-radius:5px;
+    border-radius:5px;
+    -moz-box-shadow:1px 1px 4px #666;
+    -webkit-box-shadow:1px 1px 4px #666;
+    box-shadow:1px 1px 4px #666;
+}*/
+

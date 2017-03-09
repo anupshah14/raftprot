@@ -1,0 +1,123 @@
+  *{
+                margin:0;
+                padding:0;
+                
+   }
+           
+			
+			.search_tab{
+			!width:640px;
+			!height:480px;
+			display: block;
+			margin-left: auto;
+			margin-right: auto;			
+			!background:transparent url(images/main_page.png) no-repeat top left;
+			background-size: contain; 			
+			}
+            .search_page{
+			width:600px;
+			height:400px;
+			display: block;
+			margin-left: auto;
+			margin-right: auto;			
+			background:transparent url(images/rebuttle/search_page.png) no-repeat top left;
+			background-size: contain;
+			}
+           .protein_search{
+			width:600px;
+			height:450px;
+			display: block;
+			margin-left: auto;
+			margin-right: auto;			
+			background:transparent url(images/rebuttle/protein_search.png) no-repeat top left;
+			background-size: contain;
+			}
+			.cell_type_search{
+			width:600px;
+			height:500px;
+			display: block;
+			margin-left: auto;
+			margin-right: auto;			
+			background:transparent url(images/rebuttle/cell_search.png) no-repeat top left;
+			background-size: contain;
+			}
+			.organism_type_search{
+			width:600px;
+			height:400px;
+			display: block;
+			margin-left: auto;
+			margin-right: auto;			
+			background:transparent url(images/rebuttle/organism_search.png) no-repeat top left;
+			background-size: contain;
+			}
+			.method_type_search{
+			width:600px;
+			height:300px;
+			display: block;
+			margin-left: auto;
+			margin-right: auto;			
+			background:transparent url(images/rebuttle/method_search.png) no-repeat top left;
+			background-size: contain;
+			}
+			.year_type_search{
+			width:750px;
+			height:350px;
+			display: block;
+			margin-left: auto;
+			margin-right: auto;			
+			background:transparent url(images/rebuttle/advanced_search.png) no-repeat top left;
+			background-size: contain;
+			}
+			.condition_type_search{
+			!width:400px;
+			!height:400px;
+			display: block;
+			margin-left: auto;
+			margin-right: auto;			
+			background:transparent url(images/rebuttle/condition.png) no-repeat top left;
+			background-size: contain;
+			}
+			.protein_exp_output{
+			width:800px;
+			height:360px;
+			display: block;
+			margin-left: auto;
+			margin-right: auto;			
+			background:transparent url(images/rebuttle/single_protein_exp.png) no-repeat top left;
+			background-size: contain;
+			border:1px solid;
+			}
+			.protein_table{
+			width:800px;
+			height:360px;
+			display: block;
+			margin-left: auto;
+			margin-right: auto;			
+			background:transparent url(images/rebuttle/protein_output.png) no-repeat top left;
+			background-size: contain;
+			border:1px solid;
+			}
+			.experiment_table{
+			width:800px;
+			height:400px;
+			display: block;
+			margin-left: auto;
+			margin-right: auto;			
+			background:transparent url(images/rebuttle/exp_output.png) no-repeat top left;
+			background-size: contain;
+			border:1px solid;
+			}
+			.experiment_details{
+			width:800px;
+			height:450px;
+			display: block;
+			margin-left: auto;
+			margin-right: auto;			
+			background:transparent url(images/rebuttle/exp_details.png) no-repeat top left;
+			background-size: contain;
+			border:1px solid;
+			}
+
+
+
+
